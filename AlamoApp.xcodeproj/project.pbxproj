@@ -15,6 +15,10 @@
 		E28CBB6D24963C7300C430FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E28CBB6B24963C7300C430FC /* LaunchScreen.storyboard */; };
 		E28CBB7824963C7300C430FC /* AlamoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28CBB7724963C7300C430FC /* AlamoAppTests.swift */; };
 		E28CBB8324963C7300C430FC /* AlamoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28CBB8224963C7300C430FC /* AlamoAppUITests.swift */; };
+		E28CBB94249643FC00C430FC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28CBB92249643FC00C430FC /* Alamofire.framework */; };
+		E28CBB95249643FC00C430FC /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E28CBB92249643FC00C430FC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E28CBB96249643FC00C430FC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28CBB93249643FC00C430FC /* SwiftyJSON.framework */; };
+		E28CBB97249643FC00C430FC /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E28CBB93249643FC00C430FC /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E28CBB98249643FC00C430FC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E28CBB97249643FC00C430FC /* SwiftyJSON.framework in Embed Frameworks */,
+				E28CBB95249643FC00C430FC /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E28CBB5D24963C7100C430FC /* AlamoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlamoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28CBB6024963C7100C430FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +68,9 @@
 		E28CBB7E24963C7300C430FC /* AlamoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlamoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28CBB8224963C7300C430FC /* AlamoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoAppUITests.swift; sourceTree = "<group>"; };
 		E28CBB8424963C7300C430FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E28CBB912496416500C430FC /* Alamofire.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; name = Alamofire.xcworkspace; path = Carthage/Checkouts/Alamofire/Alamofire.xcworkspace; sourceTree = "<group>"; };
+		E28CBB92249643FC00C430FC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		E28CBB93249643FC00C430FC /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E28CBB96249643FC00C430FC /* SwiftyJSON.framework in Frameworks */,
+				E28CBB94249643FC00C430FC /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +107,7 @@
 				E28CBB7624963C7300C430FC /* AlamoAppTests */,
 				E28CBB8124963C7300C430FC /* AlamoAppUITests */,
 				E28CBB5E24963C7100C430FC /* Products */,
+				E28CBB902496416500C430FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +161,16 @@
 			path = AlamoAppUITests;
 			sourceTree = "<group>";
 		};
+		E28CBB902496416500C430FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E28CBB92249643FC00C430FC /* Alamofire.framework */,
+				E28CBB93249643FC00C430FC /* SwiftyJSON.framework */,
+				E28CBB912496416500C430FC /* Alamofire.xcworkspace */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +181,8 @@
 				E28CBB5924963C7100C430FC /* Sources */,
 				E28CBB5A24963C7100C430FC /* Frameworks */,
 				E28CBB5B24963C7100C430FC /* Resources */,
+				E28CBB98249643FC00C430FC /* Embed Frameworks */,
+				E28CBB992496440A00C430FC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -261,6 +298,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E28CBB992496440A00C430FC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E28CBB5924963C7100C430FC /* Sources */ = {
@@ -438,6 +497,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AlamoApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 6DXBU5CPWH;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AlamoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -458,6 +521,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AlamoApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 6DXBU5CPWH;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AlamoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
